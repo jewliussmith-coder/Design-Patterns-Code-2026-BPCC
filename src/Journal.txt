@@ -1,0 +1,2 @@
+journal
+Creating the SwimmerFlyer class felt more clunky due to the fact I had to copy and paste the same code for the same functions. I would say that this inheritance-based approach is considered easy to break is that if you change anything from the base class, all the subclasses wont work without updating the contents
