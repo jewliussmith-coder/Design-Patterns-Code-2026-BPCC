@@ -1,0 +1,4 @@
+Journal Phase 4 design patterns
+
+I am using the Push method of data sending because the GameTicker sends the latest update directly to each observer through the update(String data) method. The observers do not have to ask the GameTicker for the latest information. The ticker provides the data when it notifies them. This allows each observer to receive the same update while handling it differently, such as displaying a screen update, sending a push notification, or creating a tweet.
+

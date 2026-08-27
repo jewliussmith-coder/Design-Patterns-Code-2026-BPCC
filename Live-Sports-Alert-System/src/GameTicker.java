@@ -33,8 +33,10 @@ public class GameTicker implements Subject {
 
     @Override
     public void notifyObservers() {
+        String latestUpdate = getLatestUpdate();
+
         for (Observer observer : observers) {
-            observer.update();
+            observer.update(latestUpdate);
         }
     }
 }
