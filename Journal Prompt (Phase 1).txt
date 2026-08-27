@@ -1,0 +1,3 @@
+Journal Prompt (Phase 1)
+Keeping data management separate from notification logic is good software design because it follows the separation of concerns principle. The GameTicker is responsible only for storing and retrieving game updates, while another class can handle notifying users about those updates. This makes the program easier to understand, test, maintain, and modify. For example, if the notification system changes from console messages to text messages, the GameTicker does not need to be changed.
+
