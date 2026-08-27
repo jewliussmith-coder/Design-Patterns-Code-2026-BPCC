@@ -1,0 +1,3 @@
+Journal Phase 3 design patterns
+
+The notifyObservers loop goes through every object in the observers list and calls its update() method. Because the list stores objects using the Observer interface type, the GameTicker does not need to know what specific type of display or notification system is listening. Any class that implements the Observer interface can be added to the list and will be able to receive updates. This allows the ticker to broadcast notifications to different types of observers without being tightly coupled to any specific class.
