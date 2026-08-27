@@ -1,0 +1,9 @@
+Journal Phase 5 design patterns
+
+I would prefer a Pull model in a situation where observers may need different amounts or types of information from the Subject. For example, in a social media dashboard, an observer might only need to retrieve the most recent post when it is ready to display it. Instead of the Subject constantly sending all of the available data to every observer, the observer can request the specific information it needs. This can reduce unnecessary data being sent and gives each observer more control over when it retrieves information.
+
+Bonus /Reflection: 
+
+To switch from Push to Pull, I would change the update(String data) method to update() so the observer no longer receives the data directly. The GameTicker would simply notify the observers that an update occurred, and each observer would then call getLatestUpdate() to retrieve the information it needs. Switching back to Push would reverse this by having the GameTicker send the data directly through update(String data).
+
+
