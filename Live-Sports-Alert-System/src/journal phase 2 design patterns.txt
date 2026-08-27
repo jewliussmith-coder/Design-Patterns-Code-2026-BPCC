@@ -1,0 +1,3 @@
+journal phase 2 design patterns
+
+These interfaces decouple the notification system from specific classes like `SocialMediaBot` because the `Subject` only needs to know that an object follows the `Observer` interface. It does not need to know how the `SocialMediaBot` works or what it does when it receives an update. Any class can implement the `Observer` interface and receive notifications. This makes the system more flexible because observers can be added, removed, or changed without having to modify the Subject's notification logic.
