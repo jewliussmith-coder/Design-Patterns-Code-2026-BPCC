@@ -1,3 +1,0 @@
-Journal Phase 1
-
-PlainText and TextDecorator must share the same TextComponent interface so that they can be treated the same way by the rest of the program. TextDecorator uses inheritance Is-A because it is a type of TextComponent and must provide the getText() method. It also uses composition Has-A because it contains a TextComponent object inside of it. This allows the decorator to wrap PlainText or another decorator and add new behavior without changing the original text class.
