@@ -1,4 +1,0 @@
-Journal Phase 2
-
-A concrete decorator must call the inner component’s getText() method because the decorator needs to build on whatever text and formatting has already been applied. If it stored or hardcoded the raw text, it would ignore other decorators and the whole purpose of chaining decorators would be lost. For example, if UpperCaseDecorator wraps BoldDecorator, PlainText first returns “this,” BoldDecorator changes it to “<b>this</b>,” and then UpperCaseDecorator changes the entire result to “<B>THIS</B>.” If BoldDecorator wraps UpperCaseDecorator, PlainText first returns “this,” UpperCaseDecorator changes it to “THIS,” and then BoldDecorator adds the tags, resulting in “<b>THIS</b>.” The order of decorators therefore affects the final result.
-

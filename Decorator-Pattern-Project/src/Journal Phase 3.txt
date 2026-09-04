@@ -1,0 +1,4 @@
+Journal Phase 3
+
+This implementation satisfies the Open-Closed Principle because the existing classes are open for extension but closed for modification. If I needed to add an UnderlineDecorator, I would only need to create a new class that extends TextDecorator and implements the getText() method. I would not need to modify TextComponent, PlainText, TextDecorator, or any of the existing decorators. This allows new formatting features to be added without changing code that already works.
+
