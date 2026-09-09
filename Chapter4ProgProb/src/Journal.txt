@@ -1,3 +1,4 @@
 Journal
 
-The Factory Method pattern uses inheritance to let each spawner decide which enemies it creates. If we add a new level such as a MountainSpawner, we can create a new class that extends EnemySpawner and override createEnemy() to create mountain enemies. The existing ForestSpawner and DungeonSpawner do not need to be changed. This makes the game easier to expand because each level can have its own enemy creation rules.
+The Abstract Factory pattern guarantees compatible equipment because each factory creates a complete matching family of objects. The WarriorEquipmentFactory always creates a Sword and PlateArmor, while the MageEquipmentFactory always creates a Staff and Robe. The Enemy only needs to receive an EquipmentFactory, so it does not have to choose individual pieces of equipment. This prevents combinations such as a Mage using heavy Warrior armor and makes the equipment system easier to expand.
+
