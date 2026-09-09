@@ -1,13 +1,15 @@
 public class Main {
 
     public static void main(String[] args) {
-        SimpleEnemyFactory factory = new SimpleEnemyFactory();
+       EnemySpawner forestSpawner = new ForestSpawner();
+       EnemySpawner dungeonSpawner = new DungeonSpawner();
 
-        Enemy goblin = factory.createEnemy("goblin");
-        Enemy skeleton = factory.createEnemy("skeleton");
+       Enemy goblin = forestSpawner.spawnEnemy("goblin");
+       goblin.attack();
 
-        goblin.attack();
-        skeleton.attack();
+       Enemy skeleton = dungeonSpawner.spawnEnemy("skeleton");
+       skeleton.attack();
     }
 }
+
 
