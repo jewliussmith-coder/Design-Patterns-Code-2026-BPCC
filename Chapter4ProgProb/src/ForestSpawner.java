@@ -3,9 +3,9 @@ public class ForestSpawner extends EnemySpawner {
     protected Enemy createEnemy(String type){
         switch (type){
             case "goblin":
-                return new Goblin();
+                return new Goblin(new WarriorEquipmentFactory());
             case "wolf":
-                return new Wolf();
+                return new Wolf(new WarriorEquipmentFactory());
             default:
                 return null;
         }
