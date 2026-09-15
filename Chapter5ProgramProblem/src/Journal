@@ -1,0 +1,5 @@
+Journal, Phase 1
+
+
+Checking reference equality confirms that both variables point to the exact same object in memory, which shows that getInstance() is returning only one instance. The private constructor prevents other classes from creating new ConfigurationManager objects, while the static getInstance() method provides access to the single instance.
+
