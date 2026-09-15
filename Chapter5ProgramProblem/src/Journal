@@ -1,13 +1,9 @@
-Journal, Phase 3
+Journal, Phase 4
 
-Look at the constructor for your subsystem classes. From the outside, can a developer or a unit test tell that these classes depend on ConfigurationManager?
-What are hidden dependencies, and why do they make unit testing individual classes in isolation more challenging?
-
-
-No, a developer or unit test cannot tell from the subsystem constructor that it depends on ConfigurationManager because the dependency is accessed inside the methods instead.
-This is called a hidden dependency because the class relies on another class without showing it in the constructor or method parameters. 
-Hidden dependencies can make unit testing harder because the test cannot easily provide a different ConfigurationManager or mock version of it.
-
+The Singleton made it convenient for multiple subsystems to access the same configuration without having to pass the configuration object into every class. 
+However, Singleton can create problems because it uses global state and can create hidden dependencies that make testing harder. 
+A Singleton is appropriate when there should truly only be one shared instance, such as a game configuration manager.
+Dependency Injection is better when classes need to be easier to test, more flexible, or use different configurations.
 
 
 
