@@ -1,4 +1,13 @@
-Journal, Phase 2
+Journal, Phase 3
+
+Look at the constructor for your subsystem classes. From the outside, can a developer or a unit test tell that these classes depend on ConfigurationManager?
+What are hidden dependencies, and why do they make unit testing individual classes in isolation more challenging?
 
 
-Eager initialization creates the Singleton as soon as the class is loaded, while lazy initialization waits until the instance is actually needed. I would prefer lazy loading when creating the object takes a lot of resources or may not be needed. The trade-off is that the first call takes a little longer because the object has to be created.
+No, a developer or unit test cannot tell from the subsystem constructor that it depends on ConfigurationManager because the dependency is accessed inside the methods instead.
+This is called a hidden dependency because the class relies on another class without showing it in the constructor or method parameters. 
+Hidden dependencies can make unit testing harder because the test cannot easily provide a different ConfigurationManager or mock version of it.
+
+
+
+
