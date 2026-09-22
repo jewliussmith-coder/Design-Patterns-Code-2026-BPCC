@@ -1,6 +1,6 @@
-Phase 4
+Phase 5
 
-InsertCommand only needs to store the text and position so it knows what was added and where to remove it. DeleteCommand needs to store the previous text because once the text is deleted, it is no longer in the editor. Without saving the deleted text before removing it, the command would not know what to put back during an undo.
+This demonstrates the Composite Pattern because the MacroCommand groups multiple individual commands together and treats them as one command. The EditorApp does not need to know that the macro contains three different actions. It can execute or undo the entire group with one command, similar to pressing one button to perform several actions.
 
 
 
