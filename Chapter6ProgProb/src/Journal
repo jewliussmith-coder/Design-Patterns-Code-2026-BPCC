@@ -1,6 +1,7 @@
-Phase 2
+Phase 3
 
-Having the Command object responsible for its own undo logic makes the EditorApp simpler because the app does not need to know how each command is undone. The EditorApp only needs to keep track of the last command and call its undo() method. This also makes it easier to add new commands because each command can handle its own undo behavior.
+A Stack is ideal for undo operations because it uses Last-In-First-Out (LIFO). This means the most recent command is undone first. If a Queue was used instead, the oldest command would be undone first, which would not work correctly for an undo system.
+
 
 
 
