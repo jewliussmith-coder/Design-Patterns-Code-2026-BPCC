@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 public class EditorApp {
@@ -23,18 +25,25 @@ public class EditorApp {
         TextEditor editor = new TextEditor();
         EditorApp app = new EditorApp();
 
-        Command insertCommand = new InsertCommand(editor, "Hello World!", 0);
-        app.executeCommand(insertCommand);
+        Command header = new InsertCommand(editor, "=== HEADER ===", 0);
+        Command newline = new InsertCommand(editor, "\n", 14);
+        Command footer = new InsertCommand(editor, "=== FOOTER ===", 15);
 
-        System.out.println("After insert: " + editor.getText());
+        List<Command> templateCommands = new ArrayList<>();
+        templateCommands.add(header);
+        templateCommands.add(newline);
+        templateCommands.add(footer);
 
-        Command deleteCommand = new DeleteCommand(editor, 6, 5);
-        app.executeCommand(deleteCommand);
+        Command template = new MacroCommand(templateCommands);
 
-        System.out.println("After delete: " + editor.getText());
+        app.executeCommand(template);
+
+        System.out.println("After template:");
+        System.out.println(editor.getText());
 
         app.undo();
 
-        System.out.println("After undo: " + editor.getText());
+        System.out.println("After undo:");
+        System.out.println(editor.getText());
     }
 }
