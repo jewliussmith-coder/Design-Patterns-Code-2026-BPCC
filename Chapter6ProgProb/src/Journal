@@ -1,6 +1,7 @@
-Phase 3
+Phase 4
 
-A Stack is ideal for undo operations because it uses Last-In-First-Out (LIFO). This means the most recent command is undone first. If a Queue was used instead, the oldest command would be undone first, which would not work correctly for an undo system.
+InsertCommand only needs to store the text and position so it knows what was added and where to remove it. DeleteCommand needs to store the previous text because once the text is deleted, it is no longer in the editor. Without saving the deleted text before removing it, the command would not know what to put back during an undo.
+
 
 
 
