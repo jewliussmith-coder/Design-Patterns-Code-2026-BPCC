@@ -9,6 +9,10 @@ public class TextEditor {
         text.insert(position, newText);
     }
 
+    public void deleteText(int position, int length) {
+        text.delete(position, position + length);
+    }
+
     public String getText() {
         return text.toString();
     }
