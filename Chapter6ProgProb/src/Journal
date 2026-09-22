@@ -1,0 +1,7 @@
+Phase 1
+
+The EditorApp is decoupled from the TextEditor because it does not need to know how the text is changed. It only receives a Command and tells it to execute. If the app called editor.insertText() directly, it would be more connected to the TextEditor and would be harder to change or add new editing actions later. Using Command objects makes it easier to add different commands without changing the EditorApp.
+
+
+
+
