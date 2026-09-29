@@ -1,6 +1,8 @@
-Phase 1
+Phase 2
 
-The Adapter pattern helps follow the Principle of Least Knowledge by keeping the main dashboard from needing to know how the LegacyFirewall works internally. The dashboard only communicates with the SecurityLog interface, while the adapter handles the differences between the modern interface and the legacy firewall. This keeps the system less dependent on specific hardware and makes it easier to replace or add other security devices later.
+In Main, I had to keep track of the specific ports and users that were changed so I could manually reverse those actions during the All-Clear. If the system grew to 1,000 ports and 10,000 users, this would become difficult to track and could easily lead to mistakes, such as forgetting to restore a port or unlock an account. It would also make the code much longer and harder to maintain.
+
+
 
 
 
