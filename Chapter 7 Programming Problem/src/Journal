@@ -1,11 +1,4 @@
-Phase 2
+Phase 3
 
-In Main, I had to keep track of the specific ports and users that were changed so I could manually reverse those actions during the All-Clear. If the system grew to 1,000 ports and 10,000 users, this would become difficult to track and could easily lead to mistakes, such as forgetting to restore a port or unlock an account. It would also make the code much longer and harder to maintain.
-
-
-
-
-
-
-
+The Facade simplifies the Main class by replacing many individual subsystem calls with one simple method, such as liftEmergencyLockdown(). This makes the All-Clear sequence easier to understand and reduces the chance of forgetting a step. If the NetworkTrafficController were replaced with another vendor's version, Main would not need to change as long as the Facade handles the differences. Only the Facade would need to be updated to work with the new subsystem.m
 
