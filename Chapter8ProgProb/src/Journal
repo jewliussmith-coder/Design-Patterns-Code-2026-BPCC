@@ -10,3 +10,9 @@ Phase 2:
 When I called generateReport() on both objects, I noticed that the VehicleReport base class controlled the execution
 order while each subclass provided its own formatting. The most intuitive part was reusing the same workflow,
 while the tricky part was understanding how an abstract class can define the process without implementing every method itself.
+
+Phase 3:
+A boolean hook gives subclasses the option to enable or disable a behavior, while an abstract method forces
+every concrete subclass to provide its own implementation. I learned that hooks make the template method more flexible
+because the base class can conditionally run extra steps without requiring every vehicle type to use them.
+
