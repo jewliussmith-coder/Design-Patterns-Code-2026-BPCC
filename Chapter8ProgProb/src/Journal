@@ -1,0 +1,5 @@
+Phase 1:
+In this phase, I created an abstract VehicleReport class that uses a template method to run data collection,
+report formatting, and status logging in order. The Hollywood Principle means the base class controls the process and
+calls the subclass's formatting method when needed, instead of the subclass deciding when to call each method.
+Making generateReport() final ensures that subclasses cannot change the order of the steps.
