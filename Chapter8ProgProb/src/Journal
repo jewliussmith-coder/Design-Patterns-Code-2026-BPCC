@@ -16,3 +16,8 @@ A boolean hook gives subclasses the option to enable or disable a behavior, whil
 every concrete subclass to provide its own implementation. I learned that hooks make the template method more flexible
 because the base class can conditionally run extra steps without requiring every vehicle type to use them.
 
+Phase 4:
+
+While testing my program, I verified that both reports collected data, formatted the report, and logged the status in the correct order.
+The truck performed the maintenance check, while the bike skipped it because its hook returned false by default.
+I learned that testing the console output helps confirm that the Template Method pattern and conditional hook work as expected.
