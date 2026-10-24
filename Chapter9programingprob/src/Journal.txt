@@ -17,5 +17,14 @@ If a game designer asks you to add a new container type like a magical Weightles
  If we needed a WeightlessBag, I would only have to create a new class for it and change the getWeight method so it only returns its own base weight. Every other class, like the base component, items, regular bags, and the main file, would stay completely untouched.
 
 How does the Composite pattern support the Open/Closed Principle here?
+
  This proves the Composite pattern supports the Open/Closed Principle because the system is open for adding new features like custom bags, but closed for modification since you never have to rewrite the existing code to get it to work
+
+
+Phase 4
+What bugs or edge cases did you encounter while testing (such as empty bags or calculating total weights)? 
+ While testing, I checked an empty bag with nothing inside, and it correctly gave just the base weight without crashing or causing any errors. Removing items from a bag also properly updated the total weight. The recursive loop handles empty components automatically because looping through an empty list just skips straight to returning the base weight.
+
+If you consulted an AI tutor, what feedback or suggestions did it provide, and did you choose to make any changes? Explain your reasoning. 
+ I checked with an AI tutor to review the code, and it confirmed that delegating the weight and display methods through the base class without type checks was the right way to do it. It suggested adding custom indentation for deeply nested items to make the text output look cleaner, but I decided not to change it because the simple prefix approach was enough for what the assignment asked for.
 
