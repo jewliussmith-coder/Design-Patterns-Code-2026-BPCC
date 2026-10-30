@@ -1,0 +1,3 @@
+Journal:
+
+Phase 1: Writing this program was pretty simple, but I noticed I had to use 4 conditional branches to check the guard's current state. If I added a new state, like Sleeping or Panicked, I would have to go back and edit at least 2 methods: hearNoise() and loseTarget(). This could make the code more complicated and harder to manage as more states are added.
