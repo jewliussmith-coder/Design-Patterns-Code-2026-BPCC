@@ -6,9 +6,12 @@ public class SentinelGuard {
         currentState = new SleepingState(this);
     }
 
-
     public void setState(GuardState state) {
         currentState = state;
+    }
+
+    public GuardState getCurrentState() {
+        return currentState;
     }
 
     public void hearNoise() {
@@ -22,5 +25,4 @@ public class SentinelGuard {
     public void loseTarget() {
         currentState.loseTarget();
     }
-
 }
