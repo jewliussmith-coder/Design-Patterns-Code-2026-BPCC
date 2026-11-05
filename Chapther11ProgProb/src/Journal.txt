@@ -12,3 +12,9 @@ Phase 2:
 In this phase, I created a Virtual Proxy that uses lazy loading to delay creating the real media object until it's actually needed. Instead of loading everything immediately, it checks if the object is null and only creates it when one of its methods is called.
 
 The biggest difference between the Remote Proxy and Virtual Proxy is that the Remote Proxy manages the connection to an object, while the Virtual Proxy controls when an object gets created. One challenge was making sure the object only loaded once instead of being recreated every time a method was called. Overall, I learned how lazy loading can help save memory and improve efficiency.
+
+Phase 3:
+
+During manual testing, I checked that both proxies were working as expected. One thing I wanted to make sure of was that the connection and loading messages only appeared once instead of every time a method was called. Both tests worked correctly, and I didn't find any major bugs.
+
+The most important thing I learned was how the two proxies solve different problems. The Remote Proxy manages access to an object, while the Virtual Proxy delays creating an object until it's needed. I also learned that both can use the same interface, which makes them interchangeable without changing how the client interacts w
