@@ -5,3 +5,10 @@ Phase 1:
 In this phase, I created a common interface, a RealMedia class, and a RemoteMediaProxy class. The proxy checks if the connection is active before allowing the program to access the real media object. If the connection isn't active, it establishes one and then allows the request to continue.
 
 I learned that the common interface allows the client to interact with the proxy the same way it would interact with the actual object. The client doesn't need to know where the real object is located or how the connection works because the proxy handles that behind the scenes.
+
+
+Phase 2:
+
+In this phase, I created a Virtual Proxy that uses lazy loading to delay creating the real media object until it's actually needed. Instead of loading everything immediately, it checks if the object is null and only creates it when one of its methods is called.
+
+The biggest difference between the Remote Proxy and Virtual Proxy is that the Remote Proxy manages the connection to an object, while the Virtual Proxy controls when an object gets created. One challenge was making sure the object only loaded once instead of being recreated every time a method was called. Overall, I learned how lazy loading can help save memory and improve efficiency.
