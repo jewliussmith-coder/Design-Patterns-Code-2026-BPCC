@@ -1,11 +1,25 @@
 public class Main {
     public static void main(String[] args) {
-        MediaItem proxy = new VirtualMediaProxy("Generic Everyday Adventure Soundtrack", 240);
 
-        System.out.println("Media proxy created.");
-        System.out.println("Title: " + proxy.getTitle());
-        System.out.println("Duration: " + proxy.getDuration() + " seconds");
+        System.out.println("===== REMOTE PROXY TEST =====");
 
-        proxy.play();
+        RealMedia remoteMedia = new RealMedia("Generic Everyday Somewhat Boring Adventure Soundtrack", 240);
+        MediaItem remoteProxy = new RemoteMediaProxy(remoteMedia);
+
+        System.out.println("Title: " + remoteProxy.getTitle());
+        System.out.println("Duration: " + remoteProxy.getDuration());
+        remoteProxy.play();
+        remoteProxy.play();
+
+        System.out.println("\n===== VIRTUAL PROXY TEST =====");
+
+        MediaItem virtualProxy = new VirtualMediaProxy("Action Soundtrack", 300);
+
+        System.out.println("Virtual proxy created.");
+
+        System.out.println("Title: " + virtualProxy.getTitle());
+        System.out.println("Duration: " + virtualProxy.getDuration());
+        virtualProxy.play();
+        virtualProxy.play();
     }
 }
