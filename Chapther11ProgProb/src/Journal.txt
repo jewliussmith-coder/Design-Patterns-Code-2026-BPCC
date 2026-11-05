@@ -1,0 +1,7 @@
+Journal
+
+Phase 1:
+
+In this phase, I created a common interface, a RealMedia class, and a RemoteMediaProxy class. The proxy checks if the connection is active before allowing the program to access the real media object. If the connection isn't active, it establishes one and then allows the request to continue.
+
+I learned that the common interface allows the client to interact with the proxy the same way it would interact with the actual object. The client doesn't need to know where the real object is located or how the connection works because the proxy handles that behind the scenes.
