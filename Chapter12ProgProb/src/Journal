@@ -26,6 +26,11 @@ Phase 4
 The hardest part was connecting all three classes and making sure they worked together. 
 Keeping them separate made it easier to handle errors, update the coffee amount, and display messages without mixing everything into one class.
 
+Phase 5
+While testing, I checked that brewing, pouring, and invalid commands worked correctly. 
+I didn't find any major issues that needed fixing. I also used AI to review my code,
+but I decided not to make any additional changes because the program was already working as expected.
+
 
 
 
