@@ -25,7 +25,8 @@ public class CoffeePotController {
 
                         int brewAmount = Integer.parseInt(parts[1]);
                         model.brew(brewAmount);
-                        view.displayMessage("Coffee brewed! Current amount: " + model.getCurrentVolume());
+                        view.displayMessage("Coffee brewed successfully!");
+                        showStatus();
                         break;
 
                     case "pour":
@@ -36,11 +37,12 @@ public class CoffeePotController {
 
                         int pourAmount = Integer.parseInt(parts[1]);
                         model.pour(pourAmount);
-                        view.displayMessage("Coffee poured! Current amount: " + model.getCurrentVolume());
+                        view.displayMessage("Coffee poured successfully!");
+                        showStatus();
                         break;
 
                     case "status":
-                        view.displayMessage("Current coffee: " + model.getCurrentVolume());
+                        showStatus();
                         break;
 
                     case "exit":
@@ -49,14 +51,18 @@ public class CoffeePotController {
                         break;
 
                     default:
-                        view.displayMessage("Unknown command.");
+                        view.displayMessage("Unknown command. Try again.");
                         break;
                 }
-            } catch (IllegalArgumentException e) {
-                view.displayMessage("Invalid amount. Please enter a number.");
-            } catch (IllegalStateException e) {
+            } catch (NumberFormatException e) {
+                view.displayMessage("Please enter a valid number.");
+            } catch (IllegalArgumentException | IllegalStateException e) {
                 view.displayMessage("Error: " + e.getMessage());
             }
         }
+    }
+
+    private void showStatus() {
+        view.displayMessage("Current coffee: " + model.getCurrentVolume());
     }
 }
