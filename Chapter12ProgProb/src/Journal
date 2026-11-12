@@ -1,0 +1,4 @@
+I would organize the program using the MVC pattern.
+The Model will store the current amount of coffee and the pot's maximum capacity.
+The View will display the menu and messages, while the Controller will handle commands like brewing, pouring, checking the coffee level, and exiting. The Controller will also make sure the user cannot brew too much coffee or pour more than the pot contains.
+The most confusing part of this challenge is understanding how the Model, View, and Controller communicate with each other. I'm also a little unsure about handling invalid commands, but I plan to let the Controller handle those checks.
