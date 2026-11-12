@@ -16,5 +16,12 @@ Keeping these tasks separate makes the code easier to organize and maintain.
 It also keeps the View focused on interacting with the user instead of handling the coffee pot's logic. 
 
 
+Phase 3
+When the user enters a command, the View collects the input and passes it to the Controller. 
+The Controller reads and checks the command, then tells the Model to brew or pour coffee. T
+he Model updates the coffee amount and makes sure the pot stays within its limits. The View then displays the result.
+This shows how each MVC class has its own responsibility. 
+
+
 
 
