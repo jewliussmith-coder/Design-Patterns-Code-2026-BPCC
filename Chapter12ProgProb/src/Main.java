@@ -1,23 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        CoffeePotModel pot = new CoffeePotModel(20);
+        CoffeePotView view = new CoffeePotView();
+        String command = "";
 
-        pot.brew(10);
-        System.out.println("After brewing: " + pot.getCurrentVolume());
-
-        pot.pour(5);
-        System.out.println("After pouring: " + pot.getCurrentVolume());
-
-        try {
-            pot.brew(20);
-        } catch (IllegalStateException e) {
-            System.out.println(e.getMessage());
+        while (!command.equalsIgnoreCase("exit")) {
+            view.showMenu();
+            command = view.getUserInput();
+            view.displayMessage("You entered: " + command);
         }
 
-        try {
-            pot.pour(10);
-        } catch (IllegalStateException e) {
-            System.out.println(e.getMessage());
-        }
+        view.displayMessage("Goodbye!");
     }
 }
