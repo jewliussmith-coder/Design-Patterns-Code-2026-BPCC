@@ -1,14 +1,12 @@
 public class Main {
     public static void main(String[] args) {
+        CoffeePotModel model = new CoffeePotModel(20);
         CoffeePotView view = new CoffeePotView();
-        String command = "";
 
-        while (!command.equalsIgnoreCase("exit")) {
-            view.showMenu();
-            command = view.getUserInput();
-            view.displayMessage("You entered: " + command);
-        }
+        CoffeePotController controller = new CoffeePotController(model, view);
 
-        view.displayMessage("Goodbye!");
+        controller.start();
     }
 }
+
+//to use the brew and pour type it like so: (brew 10 or pour 11)
