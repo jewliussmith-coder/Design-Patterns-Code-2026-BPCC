@@ -22,6 +22,11 @@ The Controller reads and checks the command, then tells the Model to brew or pou
 he Model updates the coffee amount and makes sure the pot stays within its limits. The View then displays the result.
 This shows how each MVC class has its own responsibility. 
 
+Phase 4
+The hardest part was connecting all three classes and making sure they worked together. 
+Keeping them separate made it easier to handle errors, update the coffee amount, and display messages without mixing everything into one class.
+
+
 
 
 
