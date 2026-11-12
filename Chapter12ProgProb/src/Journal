@@ -10,5 +10,11 @@ In this phase, I created the CoffeePotModel class to track the coffee amount and
 I also added checks to prevent negative amounts, overfilling, and pouring more coffee than the pot contains. 
 I learned that the Model manages the program's data and protects it from invalid changes, which keeps the program working correctly.
 
+Phase 2
+In this phase, I created the CoffeePotView class to display the menu, collect user input, and print messages. 
+Keeping these tasks separate makes the code easier to organize and maintain. 
+It also keeps the View focused on interacting with the user instead of handling the coffee pot's logic. 
+
+
 
 
